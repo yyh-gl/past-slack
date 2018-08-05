@@ -1,0 +1,43 @@
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Past-Slack</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <!--      詳細検索ボタン-->
+      <li class="nav-item active">
+        <a class="nav-link" href="/">メッセージ検索<span class="sr-only">(current)</span></a>
+      </li>
+
+      <!--      チャンネルボタン-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          チャンネル
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% @channels['channels'].each do |channel| %>
+            <a class="dropdown-item" href="/channels/<%= channel['name'] %>"><%= channel['name'] %></a>
+          <% end %>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+</header>
+
+
+
+<!--ドロップダウンで選択したアイテム名に変更する-->
+<script>
+  $(function () {
+    $('.dropdown-menu .dropdown-item').click(function () {
+      var visibleItem = $('.dropdown-toggle', $(this).closest('.dropdown'));
+      visibleItem.text($(this).attr('value'));
+    });
+  });
+</script>
