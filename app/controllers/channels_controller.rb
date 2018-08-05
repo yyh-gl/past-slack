@@ -3,8 +3,9 @@ class ChannelsController < ApplicationController
   def show
     @channels_name = get_channels_name
     @channel_name = params[:channel]
-    response = send_request(REQ_SEARCH_MESSAGES, channel_params)
-    @messages = response['messages']
+    @users_name = get_users_name
+    @messages = get_messages(params[:keyword])
+    @keyword = params[:keyword]
   end
 
   private

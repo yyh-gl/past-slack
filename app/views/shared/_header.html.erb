@@ -26,18 +26,12 @@
       </li>
 
     </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+
+      <input class="form-control mr-sm-2" type="text" name="keyword" placeholder="メッセージ" aria-label="メッセージ">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索</button>
+    </form>
   </div>
 </nav>
 </header>
-
-
-
-<!--ドロップダウンで選択したアイテム名に変更する-->
-<script>
-  $(function () {
-    $('.dropdown-menu .dropdown-item').click(function () {
-      var visibleItem = $('.dropdown-toggle', $(this).closest('.dropdown'));
-      visibleItem.text($(this).attr('value'));
-    });
-  });
-</script>
