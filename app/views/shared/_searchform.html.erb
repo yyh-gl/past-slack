@@ -5,8 +5,8 @@
         <div class="form-group">
           <label for="channel-form">Channel</label>
           <select class="form-control" id="channel-form">
-            <% @channels['channels'].each do |channel| %>
-              <option><%= channel['name'] %></option>
+            <% @channels_name.each do |name| %>
+              <option><%= name %></option>
             <% end %>
           </select>
         </div>
@@ -14,8 +14,8 @@
         <div class="form-group">
           <label for="user-form">User</label>
           <select class="form-control" id="user-form">
-            <% @users['members'].each do |user| %>
-              <option><%= user['name'] %></option>
+            <% @users_name.each do |name| %>
+              <option><%= name %></option>
             <% end %>
           </select>
         </div>
@@ -27,6 +27,14 @@
 
         <button type="submit" class="btn btn-primary">Search</button>
       </form>
+    </div>
+    <div class="col">
+      <br>
+      <p>本サイトでは、ISDL Slackの過去メッセージを検索することが可能です。</p>
+
+      <p>早速、左記フォームからメッセージを検索してみてください。</p>
+
+      <p>* 現状では、パブリックチャンネルのみ検索可能です。</p>
     </div>
   </div>
 </div>

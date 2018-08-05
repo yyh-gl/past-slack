@@ -19,8 +19,8 @@
           チャンネル
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <% @channels['channels'].each do |channel| %>
-            <a class="dropdown-item" href="/channels/<%= channel['name'] %>"><%= channel['name'] %></a>
+          <% @channels_name.each do |name| %>
+            <a class="dropdown-item" href="/channels/<%= name %>"><%= name %></a>
           <% end %>
         </div>
       </li>
