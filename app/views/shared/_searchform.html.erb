@@ -1,10 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-6">
-      <form>
+
+      <%= form_tag('/search', method: :post) do %>
         <div class="form-group">
           <label for="channel-form">Channel</label>
-          <select class="form-control" id="channel-form">
+          <select class="form-control" id="channel-form" name="channel">
             <% @channels_name.each do |name| %>
               <option><%= name %></option>
             <% end %>
@@ -13,7 +14,7 @@
 
         <div class="form-group">
           <label for="user-form">User</label>
-          <select class="form-control" id="user-form">
+          <select class="form-control" id="user-form" name="user">
             <% @users_name.each do |name| %>
               <option><%= name %></option>
             <% end %>
@@ -22,11 +23,12 @@
 
         <div class="form-group">
           <label for="message-form">Message</label>
-          <textarea class="form-control" id="message-form" rows="3"></textarea>
+          <textarea class="form-control" id="message-form" rows="3" name="text"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Search</button>
-      </form>
+      <% end %>
+
     </div>
     <div class="col">
       <br>
