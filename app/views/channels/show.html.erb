@@ -1,13 +1,3 @@
 <%= render 'shared/header' %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-auto">
-      <h1 class="display-5"><%=	@channel_name %></h1>
-      メッセージ数：<%= @messages.size %>，
-      検索キーワード："<%= @keyword %>"
-    </div>
-  </div>
-</div>
-
 <%= render 'shared/message' %>
