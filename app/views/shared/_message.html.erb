@@ -15,8 +15,8 @@
       <div class="col-sm-9 message_section">
         <div class="row">
           <div class="new_message_head">
-            <h2><%=	@channel_name %></h2>
-            <p>メッセージ数：<%= @messages.size %></p>
+
+            <%= render 'shared/message_head' %>
 
             <div id="custom-search-input">
               <div class="input-group col-md-12">
