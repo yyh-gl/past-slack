@@ -3,6 +3,9 @@ module UsersUtil
   def get_users_name
     users_name = []
     response = send_request(REQ_GET_ALL_USERS)
+    puts 'asdf'
+    puts response
+    puts 'asdf'
     if response['ok']
       response['members'].each do |user|
         users_name << user['name']

@@ -13,8 +13,8 @@ class MessagesController < ApplicationController
     @channel_name = params[:channel]
     @user_name = params[:user]
     @user = params[:user]
-    @text = params[:text]
-    @messages = get_messages_by_all_params(params[:text], params[:channel], params[:user])
+    @keyword = params[:keyword]
+    @messages = get_messages_by_all_params(params[:keyword], params[:channel], params[:user])
   end
 
   private

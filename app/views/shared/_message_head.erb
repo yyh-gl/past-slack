@@ -1,10 +1,13 @@
 <% if @channel_detail_page %>
   <h2><%= @channel_name %></h2>
+  <% if @keyword.present? %>
+  <p>検索メッセージ：<%= @keyword %></p>
+  <% end %>
   <p>メッセージ数：<%= @messages.size %></p>
 <% else %>
   <h2>検索結果</h2>
   <p>検索チャンネル：<%= @channel_name %></p>
   <p>検索ユーザ：<%= @user %></p>
-  <p>検索メッセージ：<%= @text %></p>
+  <p>検索メッセージ：<%= @keyword %></p>
   <p>メッセージ数：<%= @messages.size %></p>
 <% end %>
