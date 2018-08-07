@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
   end
 
   def show
+    # TODO: 検索結果画面に遷移しても検索ができるようにする
     @channel_detail_page = false
     @channels_name = get_channels_name
     @channel_name = params[:channel]

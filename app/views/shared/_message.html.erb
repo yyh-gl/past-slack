@@ -18,6 +18,7 @@
 
             <%= render 'shared/message_head' %>
 
+            <% if @channel_detail_page %>
             <div id="custom-search-input">
               <div class="input-group col-md-12">
                 <form>
@@ -28,6 +29,7 @@
                 </form>
               </div>
             </div>
+            <% end %>
           </div><!--new_message_head-->
 
           <div class="chat_area">
