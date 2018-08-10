@@ -1,7 +1,7 @@
 module Request
   require 'net/http'
 
-  CACHE_EXPIRES = 5.seconds
+  CACHE_EXPIRES = 1.weeks
 
   def send_request(method, params={})
     # TODO: エラーハンドリング（APIの方も変えないとだめ）
