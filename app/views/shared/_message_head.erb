@@ -3,9 +3,11 @@
   <% if @keyword.present? %>
   <p>検索メッセージ：<%= @keyword %></p>
   <% end %>
+  <p>【最終更新日時：<%= @last_updated_date %>】</p>
   <p>メッセージ数：<%= @messages.size %></p>
 <% else %>
   <h2>検索結果</h2>
+  <p>【最終更新日時：<%= @last_updated_date %>】</p>
   <p>検索チャンネル：<%= @channel_name %></p>
   <p>検索ユーザ：<%= @user %></p>
   <p>検索メッセージ：<%= @keyword %></p>

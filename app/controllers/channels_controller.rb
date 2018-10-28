@@ -7,6 +7,7 @@ class ChannelsController < ApplicationController
     @users_name = get_users_name
     @messages = get_messages_by_keyword(params[:keyword])
     @keyword = params[:keyword]
+    @last_updated_date = get_last_updated_date
   end
 
   private

@@ -16,6 +16,7 @@ class MessagesController < ApplicationController
     @user = params[:user]
     @keyword = params[:keyword]
     @messages = get_messages_by_all_params(params[:keyword], params[:channel], params[:user])
+    @last_updated_date = get_last_updated_date
   end
 
   private
