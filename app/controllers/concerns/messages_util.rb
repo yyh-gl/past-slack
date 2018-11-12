@@ -13,7 +13,7 @@ module MessagesUtil
         message['avatar'] = users[id]['avatar']
       else
         message['user'] = 'unknown'
-        message['avatar'] = 'https://lh6.googleusercontent.com/-y-MY2satK-E/AAAAAAAAAAI/AAAAAAAAAJU/ER_hFddBheQ/photo.jpg'
+        message['avatar'] = 'https://pbs.twimg.com/profile_images/887630312225644545/x_brIpsf_400x400.jpg'
       end
       message['ts'] = Time.at(message['ts'].to_d)
     end
@@ -37,7 +37,7 @@ module MessagesUtil
         message['avatar'] = users[id]['avatar']
       else
         message['user'] = 'unknown'
-        message['avatar'] = 'https://lh6.googleusercontent.com/-y-MY2satK-E/AAAAAAAAAAI/AAAAAAAAAJU/ER_hFddBheQ/photo.jpg'
+        message['avatar'] = 'https://pbs.twimg.com/profile_images/887630312225644545/x_brIpsf_400x400.jpg'
       end
       message['ts'] = Time.at(message['ts'].to_d)
     end
